@@ -14,11 +14,15 @@
 <style type="text/css">
 	.text{
 		 margin: auto;
-    width: 60%;
+    width: 35%;
     border: 3px solid #73AD21;
-    border-spacing: 20px 20px 20px 290px;
+
+    padding: 20px 20px 20px 20px;
+
+overflow: hidden;
 
 }
+
 
 </style>
 
@@ -57,7 +61,11 @@ $("#Weather").html("<p  >The current weather is  <i class=bg-danger>"+weatherTyp
 $("#temp").html("<p>The current weather is <i class=bg-primary>"+temperature+" &deg;C</i> </p>");
 
 
-
+if (weatherType =="FEW CLOUDS" )
+{
+	alert(weatherType);
+	$('.text').css('background-image','url("image/download.jpg")');
+}
 }
 
 function weather(latitude,longitude)
